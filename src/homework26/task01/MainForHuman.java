@@ -2,22 +2,16 @@ package homework26.task01;
 
 public class MainForHuman {
 
+  public static void printHumanInfo(Human human) {
+    System.out.println("Hi, my name is " + human.name + ", i'm " + human.age + " years old.");
+  }
+
   public static void main(String[] args) {
-    Human human1 = new Human();
-    Human human2 = new Human();
-    Human human3 = new Human();
-
-    human1.name = "Nastya";
-    human1.age = 36;
-
-    human2.name = "Vadim";
-    human2.age = 19;
-
-    human3.name = "Maria";
-    human3.age = 28;
-
-    human1.introduce();
-    human2.introduce();
-    human3.introduce();
+    Human human1 = new Human("Maria", 28);
+    Human human2 = new Human("Olga", 18);
+    Human human3 = new Human("Vadim", 36);
+    printHumanInfo(human1);
+    printHumanInfo(human2);
+    printHumanInfo(human3);
   }
 }

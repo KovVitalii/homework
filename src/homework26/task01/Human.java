@@ -4,7 +4,8 @@ public class Human {
   String name;
   int age;
 
-  public void introduce() {
-    System.out.println("Hi, my name is " + name + ". I'm " + age + " years old.");
+  public Human(String name, int age) {
+    this.name = name;
+    this.age = age;
   }
 }
