@@ -7,17 +7,17 @@ public class MainForPlanets {
   public static String getPlanetsClass(Planets planet) {
     switch (planet) {
       case EARTH:
-        return "Habitable";
+        return "Class: Habitable";
       case MERCURY:
       case VENUS:
       case MARS:
         return "Lifeless stone";
       case JUPITER:
       case SATURN:
-        return "Gas giant";
+        return "Class: Gas giant";
       case URANUS:
       case NEPTUNE:
-        return "Lifeless ice planet";
+        return "Class: Lifeless ice planet";
     }
     return "";
   }
@@ -30,7 +30,10 @@ public class MainForPlanets {
     }
     int n = scanner.nextInt();
     Planets[] planets = Planets.values();
-    System.out.println("You choose planet: " + planets[n - 1].getName());
+    System.out.println("You choose planet: " + planets[n - 1].getName() + "\n"
+        + getPlanetsClass(planets[n - 1]));
+    System.out.println("Radius: " + planets[n - 1].getRadius() + " km.\n"
+        + "Mass: " + planets[n - 1].getMass() + " kg.");
   }
 
 }
