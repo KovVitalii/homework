@@ -3,16 +3,14 @@ package homework42;
 import java.util.Objects;
 
 public abstract class Entity {
-String name;
-int health;
-int attackRoll;
 
-public boolean isAlive (int health) {
-if (health <= 0) {
-return false;
-}
-  return true;
-}
+  String name;
+  int health;
+  int attackRoll;
+
+  public boolean isAlive(int health) {
+    return health > 0;
+  }
 
   public Entity(String name, int health, int attackRoll) {
     this.name = name;
@@ -54,16 +52,8 @@ return false;
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (!(o instanceof Entity)) {
-      return false;
-    }
-    Entity entity = (Entity) o;
-    return health == entity.health && attackRoll == entity.attackRoll && Objects.equals(
-        name, entity.name);
+  public boolean equals(Object obj) {
+    return super.equals(obj);
   }
 
   @Override
